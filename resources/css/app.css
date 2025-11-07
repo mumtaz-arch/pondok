@@ -9,3 +9,153 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+/* Custom Islamic Theme Styles */
+:root {
+    --islamic-green-primary: #2e7d32;
+    --islamic-green-dark: #1b5e20;
+    --islamic-green-light: #4caf50;
+    --gold-primary: #ffc107;
+    --gold-dark: #ffb300;
+    --gold-light: #ffca28;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--islamic-green-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--islamic-green-dark);
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Custom card hover effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Islamic pattern background (optional) */
+.islamic-pattern {
+    background-color: var(--islamic-green-primary);
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Custom button styles */
+.btn-islamic {
+    background: linear-gradient(135deg, var(--islamic-green-primary), var(--islamic-green-dark));
+    transition: all 0.3s ease;
+}
+
+.btn-islamic:hover {
+    background: linear-gradient(135deg, var(--islamic-green-dark), var(--islamic-green-primary));
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(46, 125, 50, 0.3);
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold-primary));
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3);
+}
+
+/* Form styling */
+.form-input-islamic {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.form-input-islamic:focus {
+    border-color: var(--islamic-green-primary);
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+/* Loading spinner */
+.spinner-islamic {
+    border: 3px solid rgba(46, 125, 50, 0.1);
+    border-radius: 50%;
+    border-top: 3px solid var(--islamic-green-primary);
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success/Alert messages */
+.alert-success-islamic {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: white;
+    border-left: 4px solid var(--gold-primary);
+}
+
+.alert-error-islamic {
+    background: linear-gradient(135deg, #f44336, #d32f2f);
+    color: white;
+    border-left: 4px solid var(--gold-primary);
+}
+
+/* Table styling */
+.table-islamic thead {
+    background: linear-gradient(135deg, var(--islamic-green-primary), var(--islamic-green-dark));
+    color: white;
+}
+
+.table-islamic tbody tr:hover {
+    background-color: rgba(46, 125, 50, 0.05);
+}
+
+/* Sidebar navigation active state */
+.nav-active {
+    background: linear-gradient(90deg, var(--islamic-green-primary), var(--islamic-green-dark));
+    border-left: 4px solid var(--gold-primary);
+}
+
+/* Custom badge styles */
+.badge-islamic {
+    background: var(--islamic-green-primary);
+    color: white;
+}
+
+.badge-gold {
+    background: var(--gold-primary);
+    color: var(--islamic-green-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        padding-top: 4rem;
+    }
+}
